@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/order_confirm_back"
+    xmlns:fancy="http://schemas.android.com/tools">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="#000"
+            style="@style/CustomTheme"
+            android:background="@color/colorAccent"/>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <ScrollView
+        android:layout_below="@id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/dark4"
+                android:layout_marginTop="160dp"
+                android:textStyle="bold"
+                android:text="@string/payment_ins"/>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/orderdetail"
+                    android:layout_marginTop="20dp"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:text="Order Details"
+                        android:visibility="gone"
+                        fancy:fb_textColor="#424242" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total No. of Items : "
+                            style="@style/fonts"
+                            android:textColor="#424242"/>
+
+                        <TextView
+                            android:id="@+id/no_of_items"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/headingfonts"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="10"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Amount : "
+                            style="@style/fonts"
+                            android:textColor="#424242"/>
+
+                        <TextView
+                            android:id="@+id/total_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/headingfonts"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="15000"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Discount : "
+                            style="@style/fonts"
+                            android:textColor="#424242"/>
+
+                        <TextView
+                            android:id="@+id/discount_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/headingfonts"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Payable Amount : "
+                            style="@style/fonts"
+                            android:textColor="#424242"/>
+
+                        <TextView
+                            android:id="@+id/payable_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/headingfonts"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="15000"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estimated Delivery Date : "
+                            style="@style/fonts"
+                            android:textColor="#424242"/>
+
+                        <TextView
+                            android:id="@+id/delivery_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/headingfonts"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="28/12/2017"/>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_width_small"
+                android:background="@color/grey_light"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/coupons_back"
+                android:weightSum="4">
+
+                <EditText
+                    android:id="@+id/couponText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Coupon Code:"
+                    style="@style/fonts"
+                    android:textColor="#424242"
+                    android:layout_weight="3"
+                    android:maxLines="1"
+                    android:maxLength="15"
+                    android:padding="10dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_gravity="center"
+                    android:textColorHint="@color/dark4"
+                    android:background="@drawable/borderfile"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:text="Apply"
+                    android:padding="5dp"
+                    android:layout_margin="10dp"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    android:background="@color/fui_transparent"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <TextView android:id="@+id/text_action_bottom2"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:background="#59ebff"
+                android:text="Proceed to Pay"
+                android:elevation="20dp"
+                android:textSize="16dp"
+                android:padding="8dp"
+                android:textColor="@color/gen_white"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:onClick="PlaceOrder"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/checkout_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:visibility="gone"
+        app:lottie_fileName="loadinganim.json" />
+
+</RelativeLayout>

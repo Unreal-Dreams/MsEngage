@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/collab_back"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userimage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/avtarimage"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="fill"
+                    android:textSize="16sp"
+                    android:layout_weight="3"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/postdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12/04/2000"
+                    android:layout_weight="1"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="4dp"
+                    android:gravity="right"/>
+
+                <TextView
+                    android:id="@+id/menuoption"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="&#8942;"
+                    android:gravity="right"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:layout_marginRight="15dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/domain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:text="Domain: Android Developer"/>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="2dp"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:text="good project cmerom good mind"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp">
+                <ImageView
+                    android:id="@+id/github"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/github"/>
+                <ImageView
+                    android:id="@+id/linkedin"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="18dp"
+                    android:layout_gravity="center"
+
+                    android:src="@drawable/github"/>
+                <ImageView
+                    android:id="@+id/whatsapp"
+                    android:layout_width="28dp"
+                    android:visibility="gone"
+                    android:layout_height="28dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/whatsapp"/>
+                <ImageView
+                    android:id="@+id/call"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginRight="18dp"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_call_24"/>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_action3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <TextView
+                        android:id="@+id/text_action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:gravity="right"
+                        android:text="Interested"
+                        android:layout_gravity="center_vertical|right"
+                        android:textColor="@color/gen_black"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:id="@+id/interest"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:foregroundGravity="center"
+                        android:visibility="visible"
+                        android:src="@drawable/like_grey"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+</LinearLayout>

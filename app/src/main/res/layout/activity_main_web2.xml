@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WebServices.MainActivityWeb">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="#000"
+            style="@style/CustomTheme"
+            android:background="@color/colorAccent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+                    android:id="@+id/tour"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/tour"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="15dp"
+                    android:onClick="viewtour"/>
+
+
+                <ImageView
+                    android:id="@+id/home"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/home"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="15dp"
+                    android:onClick="homeclick"/>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/zomato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zomato"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"
+                android:layout_marginLeft="100dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="100dp"/>
+
+            <ImageView
+                android:id="@+id/dominos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dominos"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"
+                android:layout_marginLeft="100dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="100dp"/>
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/twitter"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"
+                android:layout_marginLeft="100dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="100dp"/>
+            <ImageView
+                android:id="@+id/udemy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/udemy"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"
+                android:layout_marginLeft="100dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="100dp"/>
+            <ImageView
+                android:id="@+id/redbus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/redbus"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"
+                android:layout_marginLeft="100dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="100dp"/>
+            <ImageView
+                android:id="@+id/ola"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ola"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"
+                android:layout_marginLeft="100dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="100dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tinder"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="10dp"/>
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

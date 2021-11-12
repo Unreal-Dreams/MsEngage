@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".prodcutscategory.StationaryCategory">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="#000"
+            style="@style/CustomTheme"
+            android:background="@color/colorAccent">
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp">
+
+
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:layout_marginRight="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:src="@drawable/stationarytitle"/>-->
+
+
+            <ImageView
+                android:id="@+id/notebook"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/notebooknewnew" />
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:background="@color/black"-->
+<!--                android:layout_marginLeft="120dp"-->
+<!--                android:layout_marginRight="120dp"/>-->
+
+
+            <ImageView
+                android:id="@+id/sheets"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/sheetsnewnew"/>
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:background="@color/black"-->
+<!--                android:layout_marginLeft="120dp"-->
+<!--                android:layout_marginRight="120dp"/>-->
+
+            <ImageView
+                android:id="@+id/pen"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/pennew"/>
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:background="@color/black"-->
+<!--                android:layout_marginLeft="120dp"-->
+<!--                android:layout_marginRight="120dp"/>-->
+
+            <ImageView
+                android:id="@+id/stationary"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/statinarynewnew2"/>
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:background="@color/black"-->
+<!--                android:layout_marginLeft="120dp"-->
+<!--                android:layout_marginRight="120dp"/>-->
+
+            <ImageView
+                android:id="@+id/misc"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/miscnewnew"/>
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+</LinearLayout>

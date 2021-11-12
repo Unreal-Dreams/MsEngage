@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".clubEvents.clubActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="#000"
+            style="@style/CustomTheme"
+            android:background="@color/colorAccent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+                    android:id="@+id/tour"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/tour"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="15dp"
+                    android:onClick="viewtour"/>
+
+
+                <ImageView
+                    android:id="@+id/home"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/home"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="15dp"
+                    android:onClick="homeclick"/>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="40dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_add_black_24dp"
+        app:backgroundTint="@color/fui_bgEmail"
+        app:fabSize="normal" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarwrap">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/my_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+    </FrameLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/tv_no_cards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lottie_fileName="loadinganim.json"
+        app:lottie_loop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:lottie_autoPlay="true"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/emptyBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="empty_list.json"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

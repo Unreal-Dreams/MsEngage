@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundcollabnew3"
+    tools:context=".collab.collabPostActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="140dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/projrectdetail"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/form_back"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <EditText
+                    android:id="@+id/domainField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter ProjectDomain"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark4"
+                    android:backgroundTint="@color/md_deep_orange_800"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+
+            </LinearLayout>
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/descField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Your Project Description"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/dark4"
+                android:backgroundTint="@color/md_orange_800"
+                android:textColor="@color/black"
+                android:layout_marginBottom="6dp"/>
+
+        </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/contact_detail"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"/>
+
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                 android:background="@drawable/form_back"
+                 android:layout_marginTop="7dp"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal">
+                     <EditText
+                         android:id="@+id/mobileText"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="Enter Your Mobile No."
+                         android:textSize="16sp"
+                         android:maxLength="10"
+                         android:inputType="phone"
+                         android:digits="1234567890"
+                         android:textColor="@color/black"
+                         android:layout_marginTop="10dp"
+                         android:layout_marginRight="10dp"
+                         android:textColorHint="@color/dark4"
+                         android:backgroundTint="@color/md_orange_800"
+                         android:layout_marginLeft="10dp"/>
+
+
+                 </LinearLayout>
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:layout_marginTop="7dp">
+                     <EditText
+                         android:id="@+id/whatsappText"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="Enter Your Whatsapp No."
+                         android:textSize="16sp"
+                         android:maxLength="10"
+                         android:inputType="phone"
+                         android:layout_marginBottom="6dp"
+                         android:layout_marginRight="10dp"
+                         android:layout_marginTop="6dp"
+                         android:textColor="@color/black"
+                         android:textColorHint="@color/dark4"
+                         android:backgroundTint="@color/md_orange_800"
+                         android:layout_marginLeft="10dp"/>
+
+
+                 </LinearLayout>
+
+
+
+             </LinearLayout>
+
+             <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/project_link"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"/>
+
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                 android:background="@drawable/form_back"
+                 android:layout_marginTop="7dp"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal">
+                     <EditText
+                         android:id="@+id/linkedinText"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="Enter Your Linkedin Profile Link:"
+                         android:textSize="16sp"
+                         android:inputType="text"
+                         android:layout_marginTop="10dp"
+                         android:layout_marginRight="10dp"
+                         android:visibility="gone"
+                         android:textColorHint="@color/dark4"
+                         android:backgroundTint="@color/md_orange_800"
+                         android:layout_marginLeft="10dp"/>
+
+
+                 </LinearLayout>
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal">
+                     <EditText
+                         android:id="@+id/githubText"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="Enter Your Github id link."
+                         android:textSize="16sp"
+                         android:inputType="text"
+                         android:layout_marginTop="10dp"
+                         android:layout_marginRight="10dp"
+                         android:textColorHint="@color/dark4"
+                         android:backgroundTint="@color/md_orange_800"
+                         android:layout_marginLeft="10dp"/>
+
+
+                 </LinearLayout>
+
+
+             </LinearLayout>
+
+
+            <Button
+                android:id="@+id/postButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/white"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"/>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

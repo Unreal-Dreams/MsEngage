@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".collab.collabActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="#000"
+            style="@style/CustomTheme"
+            android:background="@color/colorAccent">
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@id/emptyBox"
+        android:layout_width="300dp"
+        app:lottie_fileName="empty_list.json"
+        android:layout_height="300dp"
+        app:lottie_loop="true"
+        android:layout_below="@id/toolbarwrap"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:lottie_autoPlay="true"/>
+
+    <TextView
+        android:id="@+id/empty_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_below="@id/emptyBox"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:text="@string/event_empty"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarwrap"
+        android:id="@+id/framelayout"
+        android:visibility="gone">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/collabview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+    </FrameLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/tv_no_cards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lottie_fileName="loadinganim.json"
+        app:lottie_loop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/white"
+        app:lottie_autoPlay="true"/>
+
+</RelativeLayout>

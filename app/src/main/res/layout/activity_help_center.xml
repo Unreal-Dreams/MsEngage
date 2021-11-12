@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".sidebar.HelpCenter">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="fill_parent"
+        android:layout_height="58dp"
+        android:background="@color/colorAccent"
+        android:minHeight="?attr/actionBarSize"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_below="@id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideInset">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:gravity="center_horizontal"
+            android:theme="@style/AppTheme"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="300dp"
+                app:lottie_fileName="penguin.json"
+                android:layout_height="300dp"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please Feel Free to contact us in case on query or suggestion"
+                android:textSize="20sp"
+                android:textColor="#424242"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textIsSelectable="true"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="8dp"
+                android:weightSum="4">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="17sp"
+                    android:text="Email Id: "/>
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:textSize="17sp"
+                    android:text="collegebuddy.connect@gmail.com"/>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:text="Instagram" />
+                <TextView
+                    android:id="@+id/insta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:text="college_buddy_india"/>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:weightSum="4">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:text="Contact "/>
+                <TextView
+                    android:id="@+id/contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:textSize="17sp"
+                    android:text="6200690081"/>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:weightSum="4">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:text="Contact"/>
+                <TextView
+                    android:id="@+id/contactAlt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:textSize="17sp"
+                    android:gravity="center"
+
+                    android:text="8219730474"/>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:weightSum="4">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="17sp"
+                    android:gravity="center"
+
+                    android:text="Contact"/>
+                <TextView
+                    android:id="@+id/contactAlt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="17sp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+
+                    android:text="7979757341"/>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:weightSum="4">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+
+                    android:textSize="17sp"
+                    android:text="Contact"/>
+                <TextView
+                    android:id="@+id/contactAlt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:text="9149356913"/>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
