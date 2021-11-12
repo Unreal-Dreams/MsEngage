@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.printhub.printhub.Cart;
+//import com.printhub.printhub.Cart;
 import com.printhub.printhub.CheckInternetConnection;
 import com.printhub.printhub.HomeScreen.MainnewActivity;
 import com.printhub.printhub.registration.DetailActivity;
@@ -19,7 +19,7 @@ import com.printhub.printhub.registration.DetailActivity;
 import com.printhub.printhub.R;
 import com.printhub.printhub.registration.eventInterestActivity;
 import com.printhub.printhub.registration.interestActivity;
-import com.printhub.printhub.sidebar.oldOrders.OrdersActivity;
+//import com.printhub.printhub.sidebar.oldOrders.OrdersActivity;
 import com.squareup.picasso.Picasso;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -75,7 +75,7 @@ public class Profile extends AppCompatActivity {
         userImage = findViewById(R.id.userPic);
         rollnumber = findViewById(R.id.rollNumberTextview);
         eventInterest = findViewById(R.id.eventInterest);
-        orderSection =findViewById(R.id.orderSection);
+//        orderSection =findViewById(R.id.orderSection);
 
         eventInterest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,12 +101,12 @@ public class Profile extends AppCompatActivity {
             }
         });
 
-        orderSection.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Profile.this, OrdersActivity.class));
-            }
-        });
+//        orderSection.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(Profile.this, OrdersActivity.class));
+//            }
+//        });
     }
 
 

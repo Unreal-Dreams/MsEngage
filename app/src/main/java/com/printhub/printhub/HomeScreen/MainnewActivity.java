@@ -43,7 +43,7 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.util.DrawerUIUtils;
 import com.mikepenz.materialize.util.UIUtils;
-import com.printhub.printhub.WebServices.MainActivityWeb;
+//import com.printhub.printhub.WebServices.MainActivityWeb;
 import com.printhub.printhub.clubEvents.clubActivity;
 import com.printhub.printhub.collab.collabActivity;
 //import com.printhub.printhub.globalEvents.GlobalActivity;
@@ -51,14 +51,14 @@ import com.printhub.printhub.collab.collabActivity;
 //import com.printhub.printhub.prodcutscategory.StationaryCategory;
 import com.printhub.printhub.sidebar.aboutus.AboutusActivity;
 import com.printhub.printhub.bunkManager.BunkActivity;
-import com.printhub.printhub.Cart;
+//import com.printhub.printhub.Cart;
 import com.printhub.printhub.CheckInternetConnection;
 import com.printhub.printhub.sidebar.HelpCenter;
-import com.printhub.printhub.sidebar.oldOrders.OrdersActivity;
+//import com.printhub.printhub.sidebar.oldOrders.OrdersActivity;
 import com.printhub.printhub.sidebar.Profile;
 import com.printhub.printhub.R;
 import com.printhub.printhub.WelcomeActivity;
-import com.printhub.printhub.sidebar.Wishlist;
+//import com.printhub.printhub.sidebar.Wishlist;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
@@ -279,15 +279,6 @@ public class MainnewActivity extends AppCompatActivity {
                                 break;
                             case 2:
                                 startActivity(new Intent(MainnewActivity.this, Profile.class));
-                                break;
-                            case 3:
-                                startActivity(new Intent(MainnewActivity.this, OrdersActivity.class));
-                                break;
-                            case 4:
-                                startActivity(new Intent(MainnewActivity.this, Wishlist.class));
-                                break;
-                            case 5:
-                                startActivity(new Intent(MainnewActivity.this, Cart.class));
                                 break;
                             case 6:
                                 AuthUI.getInstance()

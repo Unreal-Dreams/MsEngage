@@ -35,7 +35,7 @@ import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.printhub.printhub.Cart;
+//import com.printhub.printhub.Cart;
 //import com.printhub.printhub.IndividualProduct;
 import com.printhub.printhub.R;
 import com.printhub.printhub.WebServices.WebViewActivity;
