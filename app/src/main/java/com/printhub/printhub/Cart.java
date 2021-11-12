@@ -265,10 +265,10 @@ public class Cart extends AppCompatActivity {
                         progressDialog.dismiss();
                         if(stock) {
                             progressDialog.dismiss();
-                            Intent intent = new Intent(Cart.this, OrderDetails.class);
-                            intent.putExtra("totalPrice", Float.toString(totalcost));
-                            //intent.putExtra("cartproducts",cartcollect);
-                            startActivity(intent);
+//                            Intent intent = new Intent(Cart.this, OrderDetails.class);
+//                            intent.putExtra("totalPrice", Float.toString(totalcost));
+//                            //intent.putExtra("cartproducts",cartcollect);
+//                            startActivity(intent);
                             finish();
                         }
                     }

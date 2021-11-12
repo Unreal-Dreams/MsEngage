@@ -19,10 +19,10 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import com.printhub.printhub.CheckInternetConnection;
-import com.printhub.printhub.IndividualProduct;
-import com.printhub.printhub.OrderDetails;
+//import com.printhub.printhub.IndividualProduct;
+//import com.printhub.printhub.OrderDetails;
 import com.printhub.printhub.R;
-import com.printhub.printhub.prodcutscategory.Stationary;
+//import com.printhub.printhub.prodcutscategory.Stationary;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -257,9 +257,9 @@ public class Wishlist extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         int position = recyclerView.getChildAdapterPosition(view);
-                        Intent intent = new Intent(Wishlist.this, IndividualProduct.class);
-                        intent.putExtra("key", keys.get(position));
-                        startActivity(intent);
+//                        Intent intent = new Intent(Wishlist.this, IndividualProduct.class);
+//                        intent.putExtra("key", keys.get(position));
+//                        startActivity(intent);
                     }
                 });
             }

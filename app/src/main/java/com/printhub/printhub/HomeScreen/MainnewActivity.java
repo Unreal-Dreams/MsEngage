@@ -46,9 +46,9 @@ import com.mikepenz.materialize.util.UIUtils;
 import com.printhub.printhub.WebServices.MainActivityWeb;
 import com.printhub.printhub.clubEvents.clubActivity;
 import com.printhub.printhub.collab.collabActivity;
-import com.printhub.printhub.globalEvents.GlobalActivity;
-import com.printhub.printhub.image.docCategoryChooser;
-import com.printhub.printhub.prodcutscategory.StationaryCategory;
+//import com.printhub.printhub.globalEvents.GlobalActivity;
+//import com.printhub.printhub.image.docCategoryChooser;
+//import com.printhub.printhub.prodcutscategory.StationaryCategory;
 import com.printhub.printhub.sidebar.aboutus.AboutusActivity;
 import com.printhub.printhub.bunkManager.BunkActivity;
 import com.printhub.printhub.Cart;
@@ -179,29 +179,29 @@ public class MainnewActivity extends AppCompatActivity {
                                     .cancelable(true)// Whether tapping outside the outer circle dismisses the view
                                     .tintTarget(true)
                                     .transparentTarget(true)
-                                    .outerCircleColor(R.color.second),
-                            TapTarget.forView(findViewById(R.id.globalEvents), "Global Events", "This is chance to participate in some of the most popular events and internship across India")
-                                    .targetCircleColor(R.color.colorAccent)
-                                    .titleTextColor(R.color.colorAccent)
-                                    .titleTextSize(25)
-                                    .descriptionTextSize(15)
-                                    .descriptionTextColor(R.color.colorAccent2)
-                                    .drawShadow(true)
-                                    .cancelable(true)// Whether tapping outside the outer circle dismisses the view
-                                    .tintTarget(true)
-                                    .transparentTarget(true)
-                                    .outerCircleColor(R.color.third),
-                            TapTarget.forView(findViewById(R.id.printcard),"Printouts" ,"Click here to get the Printout of Images and pdfs that you need on daily basis.")
-                                    .targetCircleColor(R.color.colorAccent)
-                                    .titleTextColor(R.color.colorAccent)
-                                    .titleTextSize(25)
-                                    .descriptionTextSize(15)
-                                    .descriptionTextColor(R.color.colorAccent2)
-                                    .drawShadow(true)
-                                    .cancelable(true)// Whether tapping outside the outer circle dismisses the view
-                                    .tintTarget(true)
-                                    .transparentTarget(true)
-                                    .outerCircleColor(R.color.third))
+                                    .outerCircleColor(R.color.second))
+//                            TapTarget.forView(findViewById(R.id.globalEvents), "Global Events", "This is chance to participate in some of the most popular events and internship across India")
+//                                    .targetCircleColor(R.color.colorAccent)
+//                                    .titleTextColor(R.color.colorAccent)
+//                                    .titleTextSize(25)
+//                                    .descriptionTextSize(15)
+//                                    .descriptionTextColor(R.color.colorAccent2)
+//                                    .drawShadow(true)
+//                                    .cancelable(true)// Whether tapping outside the outer circle dismisses the view
+//                                    .tintTarget(true)
+//                                    .transparentTarget(true)
+//                                    .outerCircleColor(R.color.third),
+//                            TapTarget.forView(findViewById(R.id.printcard),"Printouts" ,"Click here to get the Printout of Images and pdfs that you need on daily basis.")
+//                                    .targetCircleColor(R.color.colorAccent)
+//                                    .titleTextColor(R.color.colorAccent)
+//                                    .titleTextSize(25)
+//                                    .descriptionTextSize(15)
+//                                    .descriptionTextColor(R.color.colorAccent2)
+//                                    .drawShadow(true)
+//                                    .cancelable(true)// Whether tapping outside the outer circle dismisses the view
+//                                    .tintTarget(true)
+//                                    .transparentTarget(true)
+//                                    .outerCircleColor(R.color.third))
                     .listener(new TapTargetSequence.Listener() {
                         // This listener will tell us when interesting(tm) events happen in regards
                         // to the sequence
@@ -397,20 +397,20 @@ public class MainnewActivity extends AppCompatActivity {
         startActivity(new Intent(MainnewActivity.this, Profile.class));
    }
 
-   public void viewCart(View view) {
-        startActivity(new Intent(MainnewActivity.this, Cart.class));
-    }
+//   public void viewCart(View view) {
+//        startActivity(new Intent(MainnewActivity.this, Cart.class));
+//    }
 
 
 
-    public void tshirtActivity(View view) {
-        startActivity(new Intent(MainnewActivity.this, docCategoryChooser.class));
-
-    }
-    public void eventActivity(View view) {
-        Intent intent= new Intent(MainnewActivity.this , GlobalActivity.class);
-        startActivity(intent);
-    }
+//    public void tshirtActivity(View view) {
+//        startActivity(new Intent(MainnewActivity.this, docCategoryChooser.class));
+//
+//    }
+//    public void eventActivity(View view) {
+//        Intent intent= new Intent(MainnewActivity.this , GlobalActivity.class);
+//        startActivity(intent);
+//    }
 
 
     public void bagsActivity(View view) {
@@ -418,19 +418,19 @@ public class MainnewActivity extends AppCompatActivity {
         startActivity(new Intent(MainnewActivity.this, clubActivity.class));
     }
 
-    public void stationaryAcitivity(View view) {
-
-        startActivity(new Intent(MainnewActivity.this, StationaryCategory.class));
-    }
+//    public void stationaryAcitivity(View view) {
+//
+//        startActivity(new Intent(MainnewActivity.this, StationaryCategory.class));
+//    }
 
     public void calendarsActivity(View view) {
 
         startActivity(new Intent(MainnewActivity.this, BunkActivity.class));
     }
-    public void QuickAcessAcitivity(View view) {
-
-        startActivity(new Intent(MainnewActivity.this, MainActivityWeb.class));
-    }
+//    public void QuickAcessAcitivity(View view) {
+//
+//        startActivity(new Intent(MainnewActivity.this, MainActivityWeb.class));
+//    }
 
     public void keychainsActivity(View view) {
 

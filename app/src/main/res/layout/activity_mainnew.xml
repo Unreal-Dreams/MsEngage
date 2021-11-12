@@ -50,14 +50,13 @@
                     android:onClick="viewProfile"
                     android:src="@drawable/profile" />
 
-                <ImageView
-                    android:id="@+id/cart"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="15dp"
-                    android:onClick="viewCart"
-                    android:src="@drawable/cart" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/cart"-->
+<!--                    android:layout_width="4dp"-->
+<!--                    android:layout_height="9dp"-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:layout_marginRight="15dp"-->
+<!--                    android:src="@drawable/cart" />-->
 
             </LinearLayout>
 
@@ -184,23 +183,23 @@
 
                         </RelativeLayout>
 
-                        <RelativeLayout
-                            android:id="@+id/globalEvents"
-                            style="@style/homegridcard"
-                            android:onClick="eventActivity"
-                            android:background="@drawable/button_back"
-                            >
-                            <ImageView
-                                android:id="@+id/events"
-                                style="@style/homegridimage"
-                                android:src="@drawable/promo" />
+<!--                        <RelativeLayout-->
+<!--                            android:id="@+id/globalEvents"-->
+<!--                            style="@style/homegridcard"-->
+<!--                            android:background="@drawable/button_back"-->
+<!--                            >-->
 
-                            <TextView
-                                style="@style/homegridtext"
-                                android:layout_below="@id/events"
-                                android:text="Events" />
+<!--                            <ImageView-->
+<!--                                android:id="@+id/events"-->
+<!--                                style="@style/homegridimage"-->
+<!--                                android:src="@drawable/promo" />-->
 
-                        </RelativeLayout>
+<!--                            <TextView-->
+<!--                                style="@style/homegridtext"-->
+<!--                                android:layout_below="@id/events"-->
+<!--                                android:text="Events" />-->
+
+<!--                        </RelativeLayout>-->
 
                 </LinearLayout>
 
@@ -211,45 +210,43 @@
                     android:weightSum="10">
 
 
-                    <RelativeLayout
-                        android:id="@+id/printcard"
-                        style="@style/homegridcard"
-                        android:onClick="tshirtActivity"
-                        android:background="@drawable/button_back"
-                        >
+<!--                    <RelativeLayout-->
+<!--                        android:id="@+id/printcard"-->
+<!--                        style="@style/homegridcard"-->
+<!--                        android:background="@drawable/button_back"-->
+<!--                        >-->
 
-                        <ImageView
-                            android:id="@+id/tshirts"
-                            style="@style/homegridimage"
-                            android:src="@drawable/pdf" />
+<!--                        <ImageView-->
+<!--                            android:id="@+id/tshirts"-->
+<!--                            style="@style/homegridimage"-->
+<!--                            android:src="@drawable/pdf" />-->
 
-                        <TextView
-                            style="@style/homegridtext"
-                            android:layout_below="@id/tshirts"
-                            android:text="Printout" />
+<!--                        <TextView-->
+<!--                            style="@style/homegridtext"-->
+<!--                            android:layout_below="@id/tshirts"-->
+<!--                            android:text="Printout" />-->
 
-                    </RelativeLayout>
-
+<!--                    </RelativeLayout>-->
 
 
 
-                        <RelativeLayout
-                            style="@style/homegridcard"
-                            android:onClick="stationaryAcitivity"
-                            android:background="@drawable/button_back"
-                            >
 
-                            <ImageView
-                                android:id="@+id/Stationary"
-                                style="@style/homegridimage"
-                                android:src="@drawable/pens" />
+<!--                        <RelativeLayout-->
+<!--                            style="@style/homegridcard"-->
+<!--                            android:background="@drawable/button_back"-->
+<!--                            >-->
 
-                            <TextView
-                                style="@style/homegridtext"
-                                android:layout_below="@id/Stationary"
-                                android:text="Purchase Stationary" />
+<!--                            <ImageView-->
+<!--                                android:id="@+id/Stationary"-->
+<!--                                style="@style/homegridimage"-->
+<!--                                android:src="@drawable/pens" />-->
 
-                        </RelativeLayout>
+<!--                            <TextView-->
+<!--                                style="@style/homegridtext"-->
+<!--                                android:layout_below="@id/Stationary"-->
+<!--                                android:text="Purchase Stationary" />-->
+
+<!--                        </RelativeLayout>-->
 
                 </LinearLayout>
                 <LinearLayout
@@ -261,61 +258,30 @@
 
 
 
-                    <RelativeLayout
-                        android:id="@+id/webServices"
-                        style="@style/homegridcard"
-                        android:onClick="QuickAcessAcitivity"
-                        android:background="@drawable/button_back"
-                        >
+<!--                    <RelativeLayout-->
+<!--                        android:id="@+id/webServices"-->
+<!--                        style="@style/homegridcard"-->
+<!--                        android:background="@drawable/button_back"-->
+<!--                        >-->
 
-                        <ImageView
-                            android:id="@+id/quickacess"
-                            style="@style/homegridimage"
-                            android:src="@drawable/allinone" />
+<!--                        <ImageView-->
+<!--                            android:id="@+id/quickacess"-->
+<!--                            style="@style/homegridimage"-->
+<!--                            android:src="@drawable/allinone" />-->
 
-                        <TextView
-                            style="@style/homegridtext"
-                            android:id="@+id/text"
-                            android:layout_below="@id/quickacess"
-                            android:text="Web Services(Beta)" />
+<!--                        <TextView-->
+<!--                            android:id="@+id/text"-->
+<!--                            style="@style/homegridtext"-->
+<!--                            android:layout_below="@id/quickacess"-->
+<!--                            android:text="Web Services(Beta)" />-->
 
-                    </RelativeLayout>
+<!--                    </RelativeLayout>-->
 
                 </LinearLayout>
 
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#34495e"
-                android:gravity="center"
-                android:padding="10dp"
-                android:weightSum="10">
-
-                <TextView
-                    style="@style/headingfonts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:gravity="left"
-                    android:padding="5dp"
-                    android:text="We are best at"
-                    android:textColor="#bdc3c7" />
-
-                <com.tomer.fadingtextview.FadingTextView
-                    style="@style/headingfonts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="7"
-                    android:gravity="center"
-                    android:textColor="#ecf0f1"
-                    app:texts="@array/examples"
-                    app:timeout="500" />
-
-            </LinearLayout>
 
 
         </LinearLayout>

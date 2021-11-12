@@ -41,7 +41,7 @@ import com.printhub.printhub.bunkManager.Subjectlist;
 import com.printhub.printhub.collab.collabActivity;
 import com.printhub.printhub.collab.collabClass;
 import com.printhub.printhub.collab.collabPostActivity;
-import com.printhub.printhub.prodcutscategory.Stationary;
+//import com.printhub.printhub.prodcutscategory.Stationary;
 import com.squareup.picasso.Picasso;
 
 import java.text.ParseException;
