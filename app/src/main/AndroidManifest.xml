@@ -30,20 +30,20 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
             </intent-filter>
         </service>
-        <activity android:name=".sidebar.oldOrders.replaceLapsed"></activity>
+<!--        <activity android:name=".sidebar.oldOrders.replaceLapsed"></activity>-->
         <activity
-            android:name=".globalEvents.GlobalActivity"
+            android:name=".Chat.FirebaseUIActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".OrderPendingActivity"
+            android:name=".Chat.MainActivityChat"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".sidebar.oldOrders.ReplacementActivity"
+            android:name=".Chat.ChatActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".sidebar.oldOrders.ReturnActivity"
-            android:screenOrientation="portrait" />
-        <activity
+<!--        <activity-->
+<!--            android:name=".sidebar.oldOrders.ReturnActivity"-->
+<!--            android:screenOrientation="portrait" />-->
+<!--        <activity-->
             android:name=".registration.eventInterestActivity"
             android:screenOrientation="portrait" />
 
@@ -59,12 +59,12 @@
         <activity
             android:name=".registration.interestActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".image.docCategoryChooser"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".WebServices.MainActivityWeb"
-            android:screenOrientation="portrait" />
+<!--        <activity-->
+<!--            android:name=".image.docCategoryChooser"-->
+<!--            android:screenOrientation="portrait" />-->
+<!--        <activity-->
+<!--            android:name=".WebServices.MainActivityWeb"-->
+<!--            android:screenOrientation="portrait" />-->
         <activity
             android:name=".WebServices.WebViewActivity"
             android:screenOrientation="portrait" />
@@ -80,12 +80,12 @@
         <activity
             android:name=".clubEvents.clubActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".image.MultipleImages"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".sidebar.oldOrders.OrdersActivity"
-            android:screenOrientation="portrait" />
+<!--        <activity-->
+<!--            android:name=".image.MultipleImages"-->
+<!--            android:screenOrientation="portrait" />-->
+<!--        <activity-->
+<!--            android:name=".sidebar.oldOrders.OrdersActivity"-->
+<!--            android:screenOrientation="portrait" />-->
         <activity
             android:name=".openingaActivity.SplashActivity"
             android:screenOrientation="portrait">
@@ -97,42 +97,42 @@
         </activity> <!-- <activity -->
         <!-- android:name=".prodcutscategory.Cards" -->
         <!-- android:theme="@style/WhiteTheme" /> -->
-        <activity
-            android:name=".prodcutscategory.Bags"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".prodcutscategory.Keychains"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".prodcutscategory.Stationary"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".prodcutscategory.StationaryCategory"
-            android:screenOrientation="portrait" />
+<!--        <activity-->
+<!--            android:name=".prodcutscategory.Bags"-->
+<!--            android:screenOrientation="portrait" />-->
+<!--        <activity-->
+<!--            android:name=".prodcutscategory.Keychains"-->
+<!--            android:screenOrientation="portrait" />-->
+<!--        <activity-->
+<!--            android:name=".prodcutscategory.Stationary"-->
+<!--            android:screenOrientation="portrait" />-->
+<!--        <activity-->
+<!--            android:name=".prodcutscategory.StationaryCategory"-->
+<!--            android:screenOrientation="portrait" />-->
         <activity
             android:name=".HomeScreen.MainnewActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".sidebar.Profile"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".sidebar.Wishlist"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Cart"
-            android:screenOrientation="portrait" />
+<!--        <activity-->
+<!--            android:name=".sidebar.Wishlist"-->
+<!--            android:screenOrientation="portrait" />-->
+<!--        <activity-->
+<!--            android:name=".Cart"-->
+<!--            android:screenOrientation="portrait" />-->
         <activity
             android:name=".sidebar.HelpCenter"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".OrderDetails"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".OrderPlaced"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".IndividualProduct"
-            android:screenOrientation="portrait" />
+<!--        <activity-->
+<!--            android:name=".OrderDetails"-->
+<!--            android:screenOrientation="portrait" />-->
+<!--        <activity-->
+<!--            android:name=".OrderPlaced"-->
+<!--            android:screenOrientation="portrait" />-->
+<!--        <activity-->
+<!--            android:name=".IndividualProduct"-->
+<!--            android:screenOrientation="portrait" />-->
         <activity
             android:name=".NotificationActivity"
             android:screenOrientation="portrait" />
@@ -148,9 +148,9 @@
         <activity
             android:name=".registration.DetailActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".pdf.pdfActivity"
-            android:screenOrientation="portrait" />
+<!--        <activity-->
+<!--            android:name=".pdf.pdfActivity"-->
+<!--            android:screenOrientation="portrait" />-->
         <activity
             android:name=".bunkManager.EditSub"
             android:screenOrientation="portrait">

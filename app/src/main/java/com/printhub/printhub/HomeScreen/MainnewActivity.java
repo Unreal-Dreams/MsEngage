@@ -44,6 +44,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.util.DrawerUIUtils;
 import com.mikepenz.materialize.util.UIUtils;
 //import com.printhub.printhub.WebServices.MainActivityWeb;
+import com.printhub.printhub.Chat.MainActivityChat;
 import com.printhub.printhub.clubEvents.clubActivity;
 import com.printhub.printhub.collab.collabActivity;
 //import com.printhub.printhub.globalEvents.GlobalActivity;
@@ -417,7 +418,7 @@ public class MainnewActivity extends AppCompatActivity {
 
     public void calendarsActivity(View view) {
 
-        startActivity(new Intent(MainnewActivity.this, BunkActivity.class));
+        startActivity(new Intent(MainnewActivity.this, MainActivityChat.class));
     }
 //    public void QuickAcessAcitivity(View view) {
 //
