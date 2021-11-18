@@ -120,6 +120,7 @@ public class MainnewActivity extends AppCompatActivity {
         prefs = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
 
 
+        Log.d("User", "UserId: "+user.getUid()+" User Display name: "+user.getDisplayName());
 
 //
         //retrieve session values and display on listviews
