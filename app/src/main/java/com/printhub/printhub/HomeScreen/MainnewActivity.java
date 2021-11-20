@@ -418,12 +418,12 @@ public class MainnewActivity extends AppCompatActivity {
 
     public void calendarsActivity(View view) {
 
+        startActivity(new Intent(MainnewActivity.this, BunkActivity.class));
+    }
+    public void chatAcitivity(View view) {
+
         startActivity(new Intent(MainnewActivity.this, MainActivityChat.class));
     }
-//    public void QuickAcessAcitivity(View view) {
-//
-//        startActivity(new Intent(MainnewActivity.this, MainActivityWeb.class));
-//    }
 
     public void keychainsActivity(View view) {
 

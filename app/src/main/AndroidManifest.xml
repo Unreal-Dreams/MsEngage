@@ -97,14 +97,14 @@
         </activity> <!-- <activity -->
         <!-- android:name=".prodcutscategory.Cards" -->
         <!-- android:theme="@style/WhiteTheme" /> -->
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".registration.eventInterestActivity"
+            android:screenOrientation="portrait" />
 <!--        <activity-->
-<!--            android:name=".prodcutscategory.Bags"-->
-<!--            android:screenOrientation="portrait" />-->
-<!--        <activity-->
-<!--            android:name=".prodcutscategory.Keychains"-->
-<!--            android:screenOrientation="portrait" />-->
-<!--        <activity-->
-<!--            android:name=".prodcutscategory.Stationary"-->
+<!--            android:name=".registration.interestActivity"-->
 <!--            android:screenOrientation="portrait" />-->
 <!--        <activity-->
 <!--            android:name=".prodcutscategory.StationaryCategory"-->

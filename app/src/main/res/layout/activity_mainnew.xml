@@ -182,6 +182,24 @@
                                 android:text="Bunk Manager" />
 
                         </RelativeLayout>
+                    <RelativeLayout
+                        style="@style/homegridcard"
+                        android:id="@+id/chat"
+                        android:onClick="chatAcitivity"
+                        android:background="@drawable/button_back"
+                        >
+
+                        <ImageView
+                            android:id="@+id/calendars1"
+                            style="@style/homegridimage"
+                            android:src="@drawable/chat" />
+
+                        <TextView
+                            style="@style/homegridtext"
+                            android:layout_below="@id/calendars1"
+                            android:text="Chat" />
+
+                    </RelativeLayout>
 
 <!--                        <RelativeLayout-->
 <!--                            android:id="@+id/globalEvents"-->

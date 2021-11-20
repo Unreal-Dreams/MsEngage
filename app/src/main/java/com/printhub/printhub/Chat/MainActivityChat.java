@@ -2,6 +2,7 @@ package com.printhub.printhub.Chat;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.TintTypedArray;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -39,7 +41,9 @@ public class MainActivityChat extends AppCompatActivity {
     GroupAdapter adapter;
     FirebaseUser user;
     ImageButton addGroupBtn;
+    SharedPreferences detail = null,cityNameSharedPref,collegeNameSharedPref,userIdSharedPref;
     TextView avatarText;
+    String collegeName;
 
     @Override
     protected void onDestroy() {
@@ -57,6 +61,12 @@ public class MainActivityChat extends AppCompatActivity {
         // Instantiate layout variables
         avatarText = findViewById(R.id.avatarTextMain);
         addGroupBtn = findViewById(R.id.addGroup);
+        detail = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
+        userIdSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
+        collegeNameSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
+        cityNameSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
+        collegeName=collegeNameSharedPref.getString("collegeName","");
+        String cityName = cityNameSharedPref.getString("cityName", "");
 
         //Get current user instance
         user = FirebaseAuth.getInstance().getCurrentUser();
@@ -137,7 +147,7 @@ public class MainActivityChat extends AppCompatActivity {
 
         // Get a reference to our posts
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://myapplication-2ca64.firebaseio.com/");
-        DatabaseReference ref = database.getReference("Groups/");
+        DatabaseReference ref = database.getReference(collegeName+"Groups/");
 
         // Attach a listener to read the data at our posts reference
         ref.addValueEventListener(new ValueEventListener() {
@@ -199,14 +209,18 @@ public class MainActivityChat extends AppCompatActivity {
 
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://myapplication-2ca64.firebaseio.com/");
-        DatabaseReference myRef = database.getReference("Groups");
+
+        Toast.makeText(this, "College Name is "+collegeName,
+                Toast.LENGTH_LONG).show();
+        Log.e("College","College Name is "+collegeName);
+        DatabaseReference myRef = database.getReference(collegeName+"Groups");
 
 
         //Group group = new Group(groupName, new HashMap<String,Message>());
 
         String gKey = myRef.push().getKey();
 
-        myRef = database.getReference("Groups/" + gKey);
+        myRef = database.getReference(collegeName+"Groups/" + gKey);
 
         myRef.setValue(new Group(gKey, groupName)).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override

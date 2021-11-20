@@ -2,6 +2,7 @@ package com.printhub.printhub.sidebar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -80,7 +81,9 @@ public class Profile extends AppCompatActivity {
         eventInterest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.e("Crash","AppCrashing here above");
                 startActivity(new Intent(Profile.this, eventInterestActivity.class));
+                Log.e("Crash","AppCrashing here");
             }
         });
 

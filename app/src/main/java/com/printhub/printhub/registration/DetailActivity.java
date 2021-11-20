@@ -99,6 +99,7 @@ public class DetailActivity extends AppCompatActivity implements AdapterView.OnI
 
             }
         });
+      //  collegeName=getIntent().getStringExtra("collegeName");
 
 
         gettingCityNames();

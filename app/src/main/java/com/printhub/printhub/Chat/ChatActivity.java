@@ -1,5 +1,6 @@
 package com.printhub.printhub.Chat;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -37,7 +38,8 @@ public class ChatActivity extends AppCompatActivity {
     private MessageAdapter messageAdapter;
     private ListView messagesView;
     private String Uid;
-
+    SharedPreferences detail = null,cityNameSharedPref,collegeNameSharedPref,userIdSharedPref;
+    String collegeName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +52,12 @@ public class ChatActivity extends AppCompatActivity {
         messageAdapter = new MessageAdapter(this);
         messagesView = findViewById(R.id.messages_view);
         messagesView.setAdapter(messageAdapter);
+        detail = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
+        userIdSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
+        collegeNameSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
+        cityNameSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
+        collegeName=collegeNameSharedPref.getString("collegeName","");
+        String cityName = cityNameSharedPref.getString("cityName", "");
 
 
         if (savedInstanceState == null) {
@@ -65,8 +73,8 @@ public class ChatActivity extends AppCompatActivity {
             groupId = (String) savedInstanceState.getSerializable("GROUP_ID");
             groupName = (String) savedInstanceState.getSerializable("GROUP_NAME");
         }
-
-        GROUPPATH = "Groups/" + groupId + "/Messages/";
+//Here we have to update the path for the groups
+        GROUPPATH = collegeName+"Groups/" + groupId + "/Messages/";
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://myapplication-2ca64.firebaseio.com/");
         DatabaseReference myRef = database.getReference(GROUPPATH);
