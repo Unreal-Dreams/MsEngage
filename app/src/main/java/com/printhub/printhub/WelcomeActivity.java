@@ -150,9 +150,9 @@ public class WelcomeActivity extends AppCompatActivity {
     private void launchHomeScreen() {
         if(new CheckInternetConnection(this).isInternetConnected()){
             if(user == null) {
-//                startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
-//                finish();
-               signIn();
+                startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
+                finish();
+            //   signIn();
             }else {
                 startActivity(new Intent(WelcomeActivity.this, MainnewActivity.class));
                 finish();

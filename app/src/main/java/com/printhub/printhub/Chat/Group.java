@@ -12,8 +12,8 @@ public class Group {
 
 
     public Group() {
-        this.groupId = "xxxxxx";
-        this.groupName = "kalin usperan arxontes";
+        this.groupId = "Chat";
+        this.groupName = "Chat";
     }
 
     public Group(String groupId, String groupName, Message lastMessage) {

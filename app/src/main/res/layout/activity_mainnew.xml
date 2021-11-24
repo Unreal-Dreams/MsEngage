@@ -79,26 +79,29 @@
                 android:layout_height="wrap_content">
 
 
-            <com.smarteist.autoimageslider.SliderView
-                android:id="@+id/slider"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                app:sliderAnimationDuration="600"
-                app:sliderAutoCycleDirection="back_and_forth"
-                app:sliderAutoCycleEnabled="true"
-                app:sliderIndicatorSelectedColor="#5A5A5A"
-                app:sliderIndicatorUnselectedColor="#FFF"
-                android:layout_margin="10dp"
-                app:sliderScrollTimeInSec="1"
-                android:background="@drawable/collegebuddy"
-                app:sliderStartAutoCycle="true" >
-            </com.smarteist.autoimageslider.SliderView>
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/banner"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorSelectedColor="#5A5A5A"
+                    app:sliderIndicatorUnselectedColor="#FFF"
+                    app:sliderScrollTimeInSec="1"
+                    app:sliderStartAutoCycle="true"></com.smarteist.autoimageslider.SliderView>
 
 
-                            </RelativeLayout>
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="10dp">
@@ -145,7 +148,7 @@
                             <TextView
                                 style="@style/homegridtext"
                                 android:layout_below="@id/bags"
-                                android:text="Club Activities" />
+                                android:text="Live Events" />
 
                         </RelativeLayout>
 

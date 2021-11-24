@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/shadow"
     android:fitsSystemWindows="true"
-    tools:context=".ChatActivity">
+    tools:context=".Chat.ChatActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -76,8 +76,9 @@
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="20dp"
-            android:layout_height="28dp"
+            android:onClick="backButton"
+            android:layout_width="21dp"
+            android:layout_height="17dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="8dp"
             android:adjustViewBounds="true"
@@ -91,15 +92,15 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/baseline_keyboard_backspace_black_36dp" />
 
-        <ImageButton
-            android:id="@+id/moreBtn"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/baseline_info_black_36dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <ImageButton-->
+<!--            android:id="@+id/moreBtn"-->
+<!--            android:layout_width="28dp"-->
+<!--            android:layout_height="28dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:background="@drawable/baseline_info_black_36dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,6 +20,7 @@ import androidx.appcompat.widget.TintTypedArray;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -44,6 +46,10 @@ public class MainActivityChat extends AppCompatActivity {
     SharedPreferences detail = null,cityNameSharedPref,collegeNameSharedPref,userIdSharedPref;
     TextView avatarText;
     String collegeName;
+//    private LottieAnimationView loadingAnimation;
+    FirebaseDatabase database;
+    DatabaseReference ref;
+    RecyclerView recyclerView;
 
     @Override
     protected void onDestroy() {
@@ -61,6 +67,7 @@ public class MainActivityChat extends AppCompatActivity {
         // Instantiate layout variables
         avatarText = findViewById(R.id.avatarTextMain);
         addGroupBtn = findViewById(R.id.addGroup);
+//        loadingAnimation=findViewById(R.id.loading_anim);
         detail = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
         userIdSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
         collegeNameSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
@@ -127,7 +134,11 @@ public class MainActivityChat extends AppCompatActivity {
                         .setPositiveButton("Add", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
                                 String groupName = txtUrl.getText().toString();
-                                addGroup(groupName);
+                                if(groupName.length()==0){
+                                    Toast.makeText(getApplicationContext(),"Group Name Cannot be Empty", Toast.LENGTH_SHORT).show();
+                                }else {
+                                    addGroup(groupName);
+                                }
                             }
                         })
                         .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -141,13 +152,15 @@ public class MainActivityChat extends AppCompatActivity {
 
 
         // get the reference of RecyclerView
-        final RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         // data to populate the RecyclerView with
 
 
         // Get a reference to our posts
-        FirebaseDatabase database = FirebaseDatabase.getInstance("https://myapplication-2ca64.firebaseio.com/");
-        DatabaseReference ref = database.getReference(collegeName+"Groups/");
+        database = FirebaseDatabase.getInstance("https://myapplication-2ca64.firebaseio.com/");
+        ref = database.getReference(collegeName+"Groups/");
+
+//        new LoadFirebaseData().execute();
 
         // Attach a listener to read the data at our posts reference
         ref.addValueEventListener(new ValueEventListener() {
@@ -205,13 +218,90 @@ public class MainActivityChat extends AppCompatActivity {
 
     }
 
+//    private class LoadFirebaseData extends AsyncTask<Void, Void, Integer> {
+//
+//        @Override
+//        protected void onPreExecute() {
+//
+//        }
+//
+//        @Override
+//        protected void onPostExecute(Integer result) {
+//
+//            if (result == 0) {
+//                //do some thing
+//            }
+//            // after completed finished the progressbar
+////            if (loadingAnimation.getVisibility() == View.VISIBLE) {
+////                loadingAnimation.setVisibility(View.GONE);
+////            }
+//        }
+//
+//        @Override
+//        protected Integer doInBackground(Void... params) {
+//            ref.addValueEventListener(new ValueEventListener() {
+//
+//                @Override
+//                public void onDataChange(DataSnapshot dataSnapshot) {
+//
+//                    final ArrayList<Group> groups = new ArrayList<>();
+//                    //Toast.makeText(getApplicationContext(),dataSnapshot.toString() , Toast.LENGTH_SHORT).show();
+//
+//                    Iterator iterator = dataSnapshot.getChildren().iterator();
+//
+//                    while (iterator.hasNext()) {
+//                        DataSnapshot snap = (DataSnapshot) iterator.next();
+//                        Message lastMessage = new Message();
+//                        //TODO GTP XALIA
+//                        Group group = snap.getValue(Group.class);
+//                        Iterator iter = snap.child("Messages").getChildren().iterator();
+//
+//                        while (iter.hasNext()) {
+//                            lastMessage = ((DataSnapshot) iter.next()).getValue(Message.class);
+//                        }
+//
+//                        group.setLastMessage(lastMessage);
+//                        groups.add(group);
+//
+//                        //TODO CHANGE TO GROUP NAME
+//                    }
+//
+//
+//                    // set up the RecyclerView
+//                    recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+//                    adapter = new GroupAdapter(getApplicationContext(), groups);
+//                    recyclerView.setAdapter(adapter);
+//
+//                    adapter.setClickListener(new GroupAdapter.ItemClickListener() {
+//                        @Override
+//                        public void onItemClick(View view, int position) {
+//                            //Toast.makeText(getApplicationContext(), "You clicked " + adapter.getItem(position) + " on row number " + position, Toast.LENGTH_SHORT).show();
+//                            Intent i = new Intent(getApplicationContext(), ChatActivity.class);
+//
+//                            i.putExtra("GROUP_ID", adapter.getItem(position).getGroupId());
+//                            i.putExtra("GROUP_NAME", adapter.getItem(position).getGroupName());
+//                            startActivity(i);
+//                        }
+//                    });
+//                }
+//
+//                @Override
+//                public void onCancelled(DatabaseError databaseError) {
+//                    System.out.println("The read failed: " + databaseError.getCode());
+//                }
+//            });
+//
+//            return 0;
+//        }
+//    }
+
     public void addGroup(String groupName) {
 
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://myapplication-2ca64.firebaseio.com/");
 
-        Toast.makeText(this, "College Name is "+collegeName,
-                Toast.LENGTH_LONG).show();
+     //   Toast.makeText(this, "College Name is "+collegeName,
+       //         Toast.LENGTH_LONG).show();
         Log.e("College","College Name is "+collegeName);
         DatabaseReference myRef = database.getReference(collegeName+"Groups");
 

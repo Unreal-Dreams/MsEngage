@@ -1,42 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="@drawable/signinback">
 
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:id="@+id/email_Edit_Text"
-            android:hint="Email"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="-30dp"
+            android:orientation="vertical">
 
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:id="@+id/password_edit_text"
-            android:hint="Email"/>
+            <EditText
+                android:id="@+id/email_Edit_Text"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="Email"
+                android:textColorHint="@color/black" />
 
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:id="@+id/sign_in_button"
-            android:text="Sign In"/>
+            <EditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="Password"
+                android:textColorHint="@color/black" />
 
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:id="@+id/sign_up_button"
-            android:text="Sign Up"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/sign_in_button"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#63D1F4"
+                    android:text="Sign In"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/sign_up_button"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:background="#63D1F4"
+                    android:text="Sign Up"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/forgetPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="Forget Password"
+                    android:background="@color/white"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/doctroTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/dancing_script"
+                android:text="@string/app_name"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="80sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:paddingBottom="60dp"/>
+
+            <TextView
+                android:id="@+id/firstLineTextView3"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Save time and money by printing your documents"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:layout_alignBottom="@+id/doctroTextView"
+                />
+
+            <TextView
+                android:id="@+id/SigninOptionsView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="~~~~QUICKLY CONNECT WITH~~~~"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:layout_alignTop="@+id/firstLineTextView3"
+                android:layout_marginVertical="150dp"/>
+
+
+            <TextView
+                android:id="@+id/termsTextView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="By signing up or logging in, you agree to our"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                android:layout_marginVertical="180dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignTop="@+id/termsTextView3"
+                android:layout_marginVertical="20dp">
+
+                <TextView
+                    android:id="@+id/TemsTextView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terms and Conditions "
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/AndTextView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    android:text="and" />
+
+                <TextView
+                    android:id="@+id/privacyTextView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Privacy Policy"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
 
 
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

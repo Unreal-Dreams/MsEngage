@@ -11,7 +11,7 @@ public class Message {
     //private boolean belongsToCurrentUser;
 
     public Message() {
-        this.text = "kalispera";
+        this.text = "Message";
     }
 
     public Message(String text) {

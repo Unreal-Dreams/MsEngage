@@ -390,31 +390,10 @@ public class MainnewActivity extends AppCompatActivity {
         startActivity(new Intent(MainnewActivity.this, Profile.class));
    }
 
-//   public void viewCart(View view) {
-//        startActivity(new Intent(MainnewActivity.this, Cart.class));
-//    }
-
-
-
-//    public void tshirtActivity(View view) {
-//        startActivity(new Intent(MainnewActivity.this, docCategoryChooser.class));
-//
-//    }
-//    public void eventActivity(View view) {
-//        Intent intent= new Intent(MainnewActivity.this , GlobalActivity.class);
-//        startActivity(intent);
-//    }
-
-
     public void bagsActivity(View view) {
 
         startActivity(new Intent(MainnewActivity.this, clubActivity.class));
     }
-
-//    public void stationaryAcitivity(View view) {
-//
-//        startActivity(new Intent(MainnewActivity.this, StationaryCategory.class));
-//    }
 
     public void calendarsActivity(View view) {
 

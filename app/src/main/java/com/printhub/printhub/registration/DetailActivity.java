@@ -28,6 +28,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GetTokenResult;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -53,9 +54,9 @@ public class DetailActivity extends AppCompatActivity implements AdapterView.OnI
 
     EditText nameText, rollNumberText, mobileNumberText, hostelNameText;
     Spinner citySpinner,collegeSpinner;
-    String cityName=null,collegeName=null,userId;
+    String cityName=null,collegeName=null,userId,name;
     Button uploadButton;
-    SharedPreferences detail = null,cityNameSharedPref,collegeNameSharedPref,userIdSharedPref;
+    SharedPreferences detail = null,cityNameSharedPref,collegeNameSharedPref,userIdSharedPref,usernameSharedPref;
     CircleImageView circularImage;
     private static  int GALLERY_REQUEST = 1;
     Uri imageUri = null;
@@ -88,10 +89,20 @@ public class DetailActivity extends AppCompatActivity implements AdapterView.OnI
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Registering");
         progressDialog.setCancelable(false);
+
+
+        FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+        String collegeTemp=user.getEmail();
+
+        String[] arr1=collegeTemp.split("@");
+
+        String temp2=arr1[1];
+        String[] arr2=temp2.split("[.]");
+        collegeName=arr2[0];
         collegeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                collegeName = parent.getSelectedItem().toString();
+             //   collegeName = parent.getSelectedItem().toString();
             }
 
             @Override
@@ -108,6 +119,7 @@ public class DetailActivity extends AppCompatActivity implements AdapterView.OnI
         collegeNameSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
         cityNameSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
         userIdSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
+        usernameSharedPref= getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
 
         uploadButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -160,7 +172,7 @@ public class DetailActivity extends AppCompatActivity implements AdapterView.OnI
     private void startadding(){
         final String rollNumber =rollNumberText.getText().toString();
         final String mobileNumber = mobileNumberText.getText().toString();
-        final String name = nameText.getText().toString();
+        name = nameText.getText().toString();
         final String hostelName =  hostelNameText.getText().toString();
         if (!TextUtils.isEmpty(rollNumber) &&!TextUtils.isEmpty(mobileNumber)&&!TextUtils.isEmpty(collegeName) && !TextUtils.isEmpty(name) && !TextUtils.isEmpty(hostelName) && !TextUtils.isEmpty(cityName) && !TextUtils.isEmpty(name) ){
             if(mobileNumber.length()==10){
@@ -277,6 +289,7 @@ public class DetailActivity extends AppCompatActivity implements AdapterView.OnI
                         collegeNameSharedPref.edit().putString("collegeName",collegeName).apply();
                         cityNameSharedPref.edit().putString("cityName", cityName).apply();
                         userIdSharedPref.edit().putString("userId",userId).apply();
+                        usernameSharedPref.edit().putString("userName",name).apply();
                         startActivity(new Intent(getApplicationContext(), MainnewActivity.class));
                         finish();
                     }

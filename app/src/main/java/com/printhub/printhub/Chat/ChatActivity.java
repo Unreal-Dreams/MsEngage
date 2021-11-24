@@ -1,11 +1,13 @@
 package com.printhub.printhub.Chat;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,7 +20,9 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.printhub.printhub.HomeScreen.MainnewActivity;
 import com.printhub.printhub.R;
+import com.printhub.printhub.bunkManager.BunkActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -38,7 +42,7 @@ public class ChatActivity extends AppCompatActivity {
     private MessageAdapter messageAdapter;
     private ListView messagesView;
     private String Uid;
-    SharedPreferences detail = null,cityNameSharedPref,collegeNameSharedPref,userIdSharedPref;
+    SharedPreferences detail = null,cityNameSharedPref,collegeNameSharedPref,userIdSharedPref,userNameSharedPref;
     String collegeName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +60,7 @@ public class ChatActivity extends AppCompatActivity {
         userIdSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
         collegeNameSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
         cityNameSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
+        userNameSharedPref= getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
         collegeName=collegeNameSharedPref.getString("collegeName","");
         String cityName = cityNameSharedPref.getString("cityName", "");
 
@@ -80,7 +85,8 @@ public class ChatActivity extends AppCompatActivity {
         DatabaseReference myRef = database.getReference(GROUPPATH);
         user = FirebaseAuth.getInstance().getCurrentUser();
         Uid = user.getUid();
-        userName = user.getDisplayName();
+        userName = userNameSharedPref.getString("userName","");
+       // Toast.makeText(this, userName,Toast.LENGTH_LONG).show();
 
         groupNameV.setText(groupName);
         groupNameInits.setText(groupName.substring(0, 2).toUpperCase());
@@ -151,7 +157,7 @@ public class ChatActivity extends AppCompatActivity {
                 msgs.add(message);
                 //notifyDataSetChanged(msgs);
                 messageAdapter.add(message);
-
+                messagesView.setSelection(messagesView.getCount() - 1);
 
             }
 
@@ -183,6 +189,10 @@ public class ChatActivity extends AppCompatActivity {
         }
     }
 
+    public void backButton(View view) {
+
+        startActivity(new Intent(this, MainActivityChat.class));
+    }
 
     public void sendMessage(View view) {
 
@@ -198,7 +208,7 @@ public class ChatActivity extends AppCompatActivity {
 
             Date date = new Date(); // This object contains the current date value
             SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-            Message chatMessage = new Message(msg, user.getUid(), user.getDisplayName(), formatter.format(date));
+            Message chatMessage = new Message(msg, user.getUid(), userName, formatter.format(date));
             myRef.push().setValue(chatMessage);
 
 
