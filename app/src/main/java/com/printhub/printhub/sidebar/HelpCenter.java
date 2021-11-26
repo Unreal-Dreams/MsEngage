@@ -34,9 +34,6 @@ public class HelpCenter extends AppCompatActivity {
         email=findViewById(R.id.email);
         insta=findViewById(R.id.insta);
         contact=findViewById(R.id.contact);
-        contactAlt=findViewById(R.id.contactAlt);
-        contactAlt2=findViewById(R.id.contactAlt2);
-        contactAlt3=findViewById(R.id.contactAlt3);
 
         email.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +42,7 @@ public class HelpCenter extends AppCompatActivity {
 
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("plain/text");
-                intent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] {"collegebuddy.connect@gmail.com"});
+                intent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] {"vaibhavvats1000@gmail.com"});
                 intent.putExtra(android.content.Intent.EXTRA_SUBJECT,"Let's Connect");
                 intent.putExtra(android.content.Intent.EXTRA_TEXT, "");
                 startActivity(Intent.createChooser(intent,"Send"));
@@ -59,7 +56,7 @@ public class HelpCenter extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(getApplicationContext(), WebViewActivity.class);
                 Toast.makeText(getApplicationContext(), "Redirecting you to our insta handle", Toast.LENGTH_SHORT).show();
-                intent.putExtra("Link","https://www.instagram.com/college_buddy_india?r=nametag");
+                intent.putExtra("Link","https://www.instagram.com/vaibhav__kumar_/");
                 startActivity(intent);
             }
         });
@@ -72,48 +69,6 @@ public class HelpCenter extends AppCompatActivity {
                 }else{
                     Toast.makeText(getApplicationContext(),"Hey lets connect",Toast.LENGTH_LONG).show();
                     String s= "tel:"+contact.getText();
-                    Intent intent= new Intent(Intent.ACTION_CALL);
-                    intent.setData(Uri.parse(s));
-                    startActivity(intent);
-                }
-
-            }
-        });
-        contactAlt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
-                    ActivityCompat.requestPermissions((Activity) getApplicationContext(),new String[]{Manifest.permission.CALL_PHONE},9);
-                }else{
-                    String s= "tel:"+contactAlt.getText();
-                    Intent intent= new Intent(Intent.ACTION_CALL);
-                    intent.setData(Uri.parse(s));
-                    startActivity(intent);
-                }
-
-            }
-        });
-        contactAlt2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
-                    ActivityCompat.requestPermissions((Activity) getApplicationContext(),new String[]{Manifest.permission.CALL_PHONE},9);
-                }else{
-                    String s= "tel:"+contactAlt2.getText();
-                    Intent intent= new Intent(Intent.ACTION_CALL);
-                    intent.setData(Uri.parse(s));
-                    startActivity(intent);
-                }
-
-            }
-        });
-        contactAlt3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
-                    ActivityCompat.requestPermissions((Activity) getApplicationContext(),new String[]{Manifest.permission.CALL_PHONE},9);
-                }else{
-                    String s= "tel:"+contactAlt3.getText();
                     Intent intent= new Intent(Intent.ACTION_CALL);
                     intent.setData(Uri.parse(s));
                     startActivity(intent);

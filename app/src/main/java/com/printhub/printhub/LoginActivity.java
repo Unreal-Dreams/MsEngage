@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText emailEditText, passwordEditText;
     ProgressDialog progressDialog;
-    SharedPreferences detail = null,cityNameSharedPref,collegeNameSharedPref,userIdSharedPref;
+    SharedPreferences detail = null,cityNameSharedPref,collegeNameSharedPref,userIdSharedPref,userNameSharedPref;
     Button signInButton, signupButton,forgetPass;
     private String firebaseUserId;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -49,10 +49,26 @@ public class LoginActivity extends AppCompatActivity {
         collegeNameSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
         cityNameSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
         userIdSharedPref = getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
+        userNameSharedPref= getSharedPreferences("com.printhub.printhub", MODE_PRIVATE);
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signUp(emailEditText.getText().toString(),passwordEditText.getText().toString());
+
+                String email=emailEditText.getText().toString();
+                if(isValidEmail(email)) {
+                    String[] arr1 = email.split("@");
+                    String temp=arr1[1];
+                    String[] arr2=temp.split("[.]");
+                    int len=arr2.length;
+
+                    if((arr2[len-1].equals("in") && arr2[len-2].equals("ac")) || arr2[len-1].equals("edu")) {
+                        signUp(emailEditText.getText().toString(), passwordEditText.getText().toString());
+                    }else{
+                        Toast.makeText(LoginActivity.this,"Please Enter Your College EmailID ", Toast.LENGTH_SHORT).show();
+                    }
+                }else{
+                    Toast.makeText(LoginActivity.this,"Enter Valid Email ID", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         signInButton.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +90,10 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public static boolean isValidEmail(CharSequence target) {
+        return target != null && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
     }
 
     private void ResetPass(String email){
@@ -109,7 +129,7 @@ public class LoginActivity extends AppCompatActivity {
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("TAG", "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                            Toast.makeText(LoginActivity.this, "Authentication failed Please check your internet connection or this email is already registered.",
                                     Toast.LENGTH_SHORT).show();
 
                         }
@@ -147,6 +167,7 @@ public class LoginActivity extends AppCompatActivity {
                                                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                                                     if(documentSnapshot.exists()){
                                                         progressDialog.dismiss();
+                                                        userNameSharedPref.edit().putString("userName",documentSnapshot.getString("name")).apply();
                                                         detail.edit().putBoolean("fillDetails", true).apply();
                                                         Intent mainIntent = new Intent(LoginActivity.this, MainnewActivity.class);
                                                         startActivity(mainIntent);
@@ -174,7 +195,7 @@ public class LoginActivity extends AppCompatActivity {
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("TAG", "signInWithEmail:failure", task.getException());
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                            Toast.makeText(LoginActivity.this, "Enter Valid EmailID and Password.",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }

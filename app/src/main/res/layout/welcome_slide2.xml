@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/bg_screen2">
+    android:background="@color/green">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -14,7 +14,7 @@
 
         <com.airbnb.lottie.LottieAnimationView
             android:layout_width="250dp"
-            app:lottie_fileName="second.json"
+            app:lottie_fileName="collab.json"
             android:layout_height="250dp"
             android:foregroundGravity="center"
             app:lottie_autoPlay="true"

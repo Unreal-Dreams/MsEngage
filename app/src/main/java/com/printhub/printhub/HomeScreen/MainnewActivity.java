@@ -242,17 +242,17 @@ public class MainnewActivity extends AppCompatActivity {
         //Adding nav drawer items ------------------------------------------------------------------
         PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName(R.string.home).withIcon(R.drawable.home);
         PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(2).withName(R.string.myprofile).withIcon(R.drawable.profile);
-        PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(3).withName("Orders History").withIcon(R.drawable.orders);
-        PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(4).withName(R.string.wishlist).withIcon(R.drawable.wishlist);
-        PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(5).withName(R.string.cart).withIcon(R.drawable.cart);
-        PrimaryDrawerItem item6 = new PrimaryDrawerItem().withIdentifier(6).withName(R.string.logout).withIcon(R.drawable.logout);
+      //  PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(3).withName("Orders History").withIcon(R.drawable.orders);
+       // PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(4).withName(R.string.wishlist).withIcon(R.drawable.wishlist);
+      //  PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(5).withName(R.string.cart).withIcon(R.drawable.cart);
+        PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(3).withName(R.string.logout).withIcon(R.drawable.logout);
 
-        SecondaryDrawerItem item7 = new SecondaryDrawerItem().withIdentifier(9).withName(R.string.aboutus).withIcon(R.drawable.credits);
-        SecondaryDrawerItem item8 = new SecondaryDrawerItem().withIdentifier(10).withName(R.string.feedback).withIcon(R.drawable.feedback);
-        SecondaryDrawerItem item9 = new SecondaryDrawerItem().withIdentifier(11).withName(R.string.helpcentre).withIcon(R.drawable.helpccenter);
+       // SecondaryDrawerItem item4 = new SecondaryDrawerItem().withIdentifier(4).withName(R.string.aboutus).withIcon(R.drawable.credits);
+        SecondaryDrawerItem item4 = new SecondaryDrawerItem().withIdentifier(4).withName(R.string.feedback).withIcon(R.drawable.feedback);
+        SecondaryDrawerItem item5 = new SecondaryDrawerItem().withIdentifier(5).withName(R.string.helpcentre).withIcon(R.drawable.helpccenter);
 
-        SecondaryDrawerItem item10 = new SecondaryDrawerItem().withIdentifier(13).withName("App Tour").withIcon(R.drawable.explore);
-        SecondaryDrawerItem item11 = new SecondaryDrawerItem().withIdentifier(14).withName("Explore").withIcon(R.drawable.tour);
+        SecondaryDrawerItem item6 = new SecondaryDrawerItem().withIdentifier(6).withName("App Tour").withIcon(R.drawable.explore);
+        SecondaryDrawerItem item7 = new SecondaryDrawerItem().withIdentifier(7).withName("Explore").withIcon(R.drawable.tour);
 
 
         //creating navbar and adding to the toolbar ------------------------------------------------
@@ -266,12 +266,18 @@ public class MainnewActivity extends AppCompatActivity {
                 .withTranslucentStatusBar(true)
                 .withActionBarDrawerToggleAnimated(true)
                 .addDrawerItems(
-                        item1, item2, item3, item4, item5, item6, new DividerDrawerItem(), item7, item8, item9,new DividerDrawerItem(),item10,item11
+                        item1, item2, item3,   new DividerDrawerItem(), item4, item5,item6,new DividerDrawerItem(),item7
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-
+                       // Toast.makeText(MainnewActivity.this,"Position is: "+position, Toast.LENGTH_SHORT).show();
+                        if(position>3){
+                            position=position-1;
+                        }
+                        if(position>6){
+                            position=position-1;
+                        }
                         switch (position) {
 
                             case 1:
@@ -282,7 +288,7 @@ public class MainnewActivity extends AppCompatActivity {
                             case 2:
                                 startActivity(new Intent(MainnewActivity.this, Profile.class));
                                 break;
-                            case 6:
+                            case 3:
                                 AuthUI.getInstance()
                                         .signOut(MainnewActivity.this)
                                         .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -301,27 +307,23 @@ public class MainnewActivity extends AppCompatActivity {
                                     }
                                 });
                                 break;
-
-                            case 8:
-                                startActivity(new Intent(MainnewActivity.this, AboutusActivity.class));
-                                break;
-                            case 9:
+                            case 4:
                                 new EasyFeedback.Builder(MainnewActivity.this)
-                                        .withEmail("collegebuddy.connect@gmail.com")
+                                        .withEmail("vaibhavvats1000@gmail.com")
                                         .withSystemInfo()
                                         .build()
                                         .start();
                                 break;
-                            case 10:
+                            case 5:
                                 startActivity(new Intent(MainnewActivity.this, HelpCenter.class));
                                 break;
-                            case 12:
+                            case 6:
                                 prefs.edit().putBoolean("firstrun", true).commit();
                                 //session.setFirstTimeLaunch(true);
                                 startActivity(new Intent(MainnewActivity.this, WelcomeActivity.class));
                                 finish();
                                 break;
-                            case 13:
+                            case 7:
                                 if (result != null && result.isDrawerOpen()) {
                                     result.closeDrawer();
                                 }

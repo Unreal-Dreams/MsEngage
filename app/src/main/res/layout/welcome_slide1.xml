@@ -14,7 +14,7 @@
 
         <com.airbnb.lottie.LottieAnimationView
             android:layout_width="250dp"
-            app:lottie_fileName="first.json"
+            app:lottie_fileName="collegestudents.json"
             android:layout_height="250dp"
             android:foregroundGravity="center"
             app:lottie_autoPlay="true"

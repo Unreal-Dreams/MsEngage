@@ -30,17 +30,17 @@
     <string name="skip">SKIP</string>
     <string name="start">GOT IT</string>
 
-    <string name="slide_1_title">Exclusive Products</string>
-    <string name="slide_1_desc">Get Printouts, Books, Stationery items delivered at your doorsteps !</string>
+    <string name="slide_1_title">Awesome Features</string>
+    <string name="slide_1_desc"> Features like Collab, Live Events, Attendence Manager and Group Chats !</string>
 
-    <string name="slide_2_title">Cheap Rates</string>
-    <string name="slide_2_desc">Products at such an affordable rates !</string>
+    <string name="slide_2_title">Collab</string>
+    <string name="slide_2_desc">Find fellow students who want to collaborate with you to make your next project, to study together or just to follow a hobby !</string>
 
-    <string name="slide_3_title">Hassle Free Payments</string>
-    <string name="slide_3_desc">With various pay options , you can easily pay in a minute !</string>
+    <string name="slide_3_title">Live Events</string>
+    <string name="slide_3_desc">Enjoy and Learn with various events happening in the college. You can save the events that you like and we can also remind you if you want !</string>
 
-    <string name="slide_4_title">Fast Delivery</string>
-    <string name="slide_4_desc">Blazing fast order delivery within time !</string>
+    <string name="slide_4_title">Group Chat</string>
+    <string name="slide_4_desc">Create groups and chat with your College community on the topics that you love !</string>
 
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
     <string name="play_again">Play Again</string>
