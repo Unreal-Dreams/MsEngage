@@ -74,7 +74,12 @@ public class LoginActivity extends AppCompatActivity {
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signIn(emailEditText.getText().toString(),passwordEditText.getText().toString());
+                String pass=passwordEditText.getText().toString();
+                if(pass.length()<6){
+                    Toast.makeText(LoginActivity.this,"Password should have atleast 6 characters", Toast.LENGTH_SHORT).show();
+                }else {
+                    signIn(emailEditText.getText().toString(), passwordEditText.getText().toString());
+                }
             }
         });
         forgetPass.setOnClickListener(new View.OnClickListener() {

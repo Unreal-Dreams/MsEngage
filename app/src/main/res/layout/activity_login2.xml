@@ -24,7 +24,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:hint="Email"
+                android:hint="Enter Your College Email ID"
                 android:textColorHint="@color/black" />
 
             <EditText

@@ -192,6 +192,7 @@ public class ChatActivity extends AppCompatActivity {
     public void backButton(View view) {
 
         startActivity(new Intent(this, MainActivityChat.class));
+        finish();
     }
 
     public void sendMessage(View view) {

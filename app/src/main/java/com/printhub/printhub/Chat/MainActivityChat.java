@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.printhub.printhub.HomeScreen.MainnewActivity;
 import com.printhub.printhub.R;
 
 import java.util.ArrayList;
@@ -46,6 +48,7 @@ public class MainActivityChat extends AppCompatActivity {
     SharedPreferences detail = null,cityNameSharedPref,collegeNameSharedPref,userIdSharedPref;
     TextView avatarText;
     String collegeName;
+    ImageView homeButton;
 //    private LottieAnimationView loadingAnimation;
     FirebaseDatabase database;
     DatabaseReference ref;
@@ -65,6 +68,7 @@ public class MainActivityChat extends AppCompatActivity {
         setContentView(R.layout.activity_main_chat);
         //This is subbhu's code
         // Instantiate layout variables
+        homeButton=findViewById(R.id.homeBtn);
         avatarText = findViewById(R.id.avatarTextMain);
         addGroupBtn = findViewById(R.id.addGroup);
 //        loadingAnimation=findViewById(R.id.loading_anim);
@@ -205,6 +209,7 @@ public class MainActivityChat extends AppCompatActivity {
                         i.putExtra("GROUP_ID", adapter.getItem(position).getGroupId());
                         i.putExtra("GROUP_NAME", adapter.getItem(position).getGroupName());
                         startActivity(i);
+                        finish();
                     }
                 });
             }
@@ -216,6 +221,11 @@ public class MainActivityChat extends AppCompatActivity {
         });
 
 
+    }
+    public void backButton(View view) {
+
+        startActivity(new Intent(this, MainnewActivity.class));
+        finish();
     }
 
 //    private class LoadFirebaseData extends AsyncTask<Void, Void, Integer> {

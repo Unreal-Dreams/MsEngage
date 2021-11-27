@@ -13,6 +13,8 @@
         android:background="@drawable/shadow"
         app:layout_constraintTop_toTopOf="parent">
 
+
+
         <TextView
             android:layout_width="74dp"
             android:layout_height="22dp"
@@ -60,6 +62,17 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/homeBtn"
+            android:layout_width="27dp"
+            android:onClick="backButton"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/home" />
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView

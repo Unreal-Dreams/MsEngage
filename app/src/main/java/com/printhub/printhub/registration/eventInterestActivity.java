@@ -63,7 +63,6 @@ public class eventInterestActivity extends AppCompatActivity {
         empty_text=findViewById(R.id.empty_text);
         emptyBox= findViewById(R.id.emptyBox);
         frameLayout = findViewById(R.id.framelayout);
-
         manager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(manager);
         mEventsAdapter= new mEventsAdapter(new ArrayList<>(), eventInterestActivity.this, recyclerView);
