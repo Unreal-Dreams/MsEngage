@@ -13,7 +13,7 @@ Link - {https://www.youtube.com/watch?v=-q_-vSbUMpI}
 
 ## Login 
 
-Please login with your college email id as we verify legitimate students with the help of college email.If you don't have a college id and just want to explore the application please use the credentials given below. 
+Please login with your college email id as we verify legitimate students with the help of college email. If you don't have a college id and just want to explore the application please use the credentials given below. 
 
 email - 17mi445@nith.ac.in   <br/>
 password - 1234567
